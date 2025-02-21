@@ -1,6 +1,5 @@
 import { serve } from "inngest/next";
 import {
-import { Inngest } from 'inngest';
   inngest,
   syncUserCreation,
   syncUserDeletion,
