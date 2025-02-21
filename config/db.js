@@ -19,7 +19,7 @@ async function connectDB() {
     };
 
     cached.Promise = mongoose
-      .connect(process.env.MONGODB_URI, opts)
+      .connect(`${process.env.MONGODB_URI}/RasDilo-Ecommerce`, opts)
       .then((mongoose) => {
         return mongoose;
       });
