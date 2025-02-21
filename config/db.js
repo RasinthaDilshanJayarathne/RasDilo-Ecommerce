@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 let cached = global.mongoose;
 
@@ -17,7 +19,7 @@ async function connectDB() {
     };
 
     cached.Promise = mongoose
-      .connect(`${process.env.MONGODB_URI}/RasDilo-Ecommerce`, opts)
+      .connect(process.env.MONGODB_URI, opts)
       .then((mongoose) => {
         return mongoose;
       });
